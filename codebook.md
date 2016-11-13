@@ -178,3 +178,8 @@ Angle between the x, y, z directions and the mean gravitational acceleration vec
 * "angle_x_gravitymean\_"
 * "angle_y_gravitymean\_"
 * "angle_z_gravitymean\_"
+
+## Variables for tbl "mean_tbl" (2nd data frame)
+The variables describing this data are essentially the same as previously described except the
+string "mean_" is attached to beginning of the column names for the measurement variables. The 
+"set" column is also removed. 
