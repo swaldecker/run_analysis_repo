@@ -1,8 +1,8 @@
-# Codebook for run\\_analysis.R
+# Codebook for run_analysis.R
 Author: Seth Waldecker
 Last Updated: 11/13/2016
 
-## Variables for data frame "selected\\_df" (1st data frame)
+## Variables for data frame "selected_df" (1st data frame)
 
 ### Categorical variables
 * "subject" : a number identifying the subject participating in the experiments
@@ -15,23 +15,23 @@ variables are in the time domain.
 
 The following variables are acceleration variables. The
 information provided by UCI say the units of the data in
-"total\\_acc\\_x\\_train.txt" are given in units of 'g', but the data
-in "X\\_train.txt" and "X\\_test.txt" are different by a couple order
+"total_acc_x_train.txt" are given in units of 'g', but the data
+in "X_train.txt" and "X_test.txt" are different by a couple order
 of magnitude. The best I can tell, the units for the latter two
 files are in cm / s^2 (cm = centimeters, s = second).
 
 *Mean body acceleration in the x, y, z directions
-    * "tbodyacc\\_mean\\_x" 
-    * "tbodyacc\\_mean\\_y" 
-    * "tbodyacc\\_mean\\_z" 
+    * "tbodyacc_mean_x" 
+    * "tbodyacc_mean_y" 
+    * "tbodyacc_mean_z" 
 
 * Standard deviations of the body accelerations in the x, y, z directions
-    * "tbodyacc\\_std\\_x"  
-    * "tbodyacc\\_std\\_y"  
-    * "tbodyacc\\_std\\_z"  
+    * "tbodyacc_std_x"  
+    * "tbodyacc_std_y"  
+    * "tbodyacc_std_z"  
 
 * Mean acceleration due to gravity in the x, y, z directions
-    * "tgravityacc\\_mean\\_x" 
+    * "tgravityacc_mean_x" 
     * "tgravityacc\\_mean\\_y" 
     * "tgravityacc\\_mean\\_z" 
 
