@@ -12,7 +12,7 @@ which can be obtained from the following URL:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Decompressing the .zip file generates a directory containing subdirectories called
-"train" and "test". The script run\\_analysis.R generates the training and testing
+"train" and "test". The script run_analysis.R generates the training and testing
 datasets from files contained in these two directories. 
 
 An important note is that the script assumes the parent directory is
@@ -26,7 +26,7 @@ combined. For clarity, an example of how the training dataset was put together i
 described below. 
 
 The identifiers of the subjects involved in the training experiments are given in the
-file "subject\\_train.txt". Each subject is identified by a number in the range
+file "subject_train.txt". Each subject is identified by a number in the range
 1-30. The activities performed by each subject is in the file "y\\_train.txt". The
 measurments for each run of the experiment are given in the file "X\\_train.txt". 
 
