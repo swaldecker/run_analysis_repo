@@ -73,7 +73,7 @@ tidy_set <- function( tag ) {
         c("Walking", "Walking Upstairs", "Walking Downstairs",
           "Sitting", "Standing", "Laying")
     
-    ## join these data frames together with bind_cols from dplyr
+    ## join the columns of these data frames together with bind_cols from dplyr
     bind_cols( subject_df, activity_df, measurement_df )
     
 } # end tidy_set function
