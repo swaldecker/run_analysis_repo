@@ -49,13 +49,33 @@ After these two data sets were generated, they were combined using the
 bind_rows function from the dplyr package. This step is valid since there is
 no overlap between the subjects in the training and testing datasets. 
 
-Next, only the measurement columns that contained the string "mean" were
-selected. The resulting data frame is stored in an object caled
-"selected_df". 
+Next, only the measurement columns that contained the strings "mean" and "std" were selected.
+The resulting data frame is stored in an object caled "selected_df". I thought a lot about 
+whether to separate some of the columns into additional variables, such as having a column for 
+acceleration and another for type of acceleration (body, or gravity), but as a physicist 
+the columns seemed to me to already be fine the way they are. For example, acceleration in the 
+x direction is a variable in its own right. It just doesn't make sense to me to have a column 
+for acceleration and another for direction. Maybe data science treats variables differently,
+but I decided not to add columns (except the "set" column).
 
-Finally, a new data frame (actually, a tbl) was generated that
+Finally, a second data frame (actually, a tbl) was generated from the first that
 showed the averages of all the measurement variables, grouped by subject
 and activity. The tbl is stored in an object called "mean_tbl". 
+
+
+
+## Reading in files into R
+I wrote the first data frame into a file called "first_data_frame.txt", and the second data frame
+into a file called "second_data_frame.txt". 
+
+I was able to read these into RStudio without any problem using the following commands:
+
+df1 <- read.table("./first_data_frame.txt")
+df2 <- read.table("./second_data_frame.txt")
+
+I followed the suggestion of David Hood for writing out the data and reading it back into R in his article on this assignment. This article can be found at the following URL: 
+
+https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
 
 ## Other remarks
 A description of the variables in "selected_df" and
