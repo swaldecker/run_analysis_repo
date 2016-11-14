@@ -15,9 +15,9 @@ Decompressing the .zip file generates a directory containing subdirectories call
 "train" and "test". The script run_analysis.R generates the training and testing
 datasets from files contained in these two directories. 
 
-An important note is that the script assumes the parent directory is
-called UCIdata, which is different from the name produced after
-decompressing the .zip file. 
+The script assumes that the name of the directory with the train and test subdirectories
+is called UCI HAR Dataset, which is the name of directory that resulting when I 
+decompressed the .zip file.
 
 ## Gathering data into a data frame
 The testing and training datasets had to be formed from separate files before these
@@ -50,18 +50,24 @@ bind_rows function from the dplyr package. This step is valid since there is
 no overlap between the subjects in the training and testing datasets. 
 
 Next, only the measurement columns that contained the strings "mean" and "std" were selected.
-The resulting data frame is stored in an object caled "selected_df". I thought a lot about 
-whether to separate some of the columns into additional variables, such as having a column for 
-acceleration and another for type of acceleration (body, or gravity), but as a physicist 
-the columns seemed to me to already be fine the way they are. For example, acceleration in the 
-x direction is a variable in its own right. It just doesn't make sense to me to have a column 
-for acceleration and another for direction. Maybe data science treats variables differently,
-but I decided not to add columns (except the "set" column).
+The resulting data frame is stored in an object caled "selected_df".
 
 Finally, a second data frame (actually, a tbl) was generated from the first that
 showed the averages of all the measurement variables, grouped by subject
 and activity. The tbl is stored in an object called "mean_tbl". 
 
+## Note on deciding on variables to include / exclude / add
+I thought a lot about whether to separate some of the columns into additional variables,
+such as having a column for acceleration and another for type of acceleration (body, or gravity),
+but as a physicist the columns seemed to me to already be fine the way they are. For example,
+acceleration in the x direction is a variable in its own right. It just doesn't make sense to 
+me to have a column for acceleration and another for direction. Maybe data science treats 
+variables differently, but I decided not to add columns (except the "set" column).
+
+If, for example, I were to have one variable for acceleration and another for direction,
+then when I group the data by subject and activity, the accelerations in the x, y, and z
+diretions would be averaged together. Physically, that makes no sense. I would also have
+to group by x, y, and z, which was not requested by the assignment. 
 
 
 ## Reading in files into R

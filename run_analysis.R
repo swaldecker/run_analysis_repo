@@ -24,7 +24,7 @@ tidy_set <- function( tag ) {
     } #endif 
     
     ## Folder containing the training and testing datasets
-    data_dir <- "./data/UCIdata/" 
+    data_dir <- "./UCI HAR Dataset/" 
     
     ## Generate paths to files to be read in
     features_file <- paste( data_dir, "features.txt", sep = "" )
